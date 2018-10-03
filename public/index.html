@@ -8,7 +8,11 @@
     <main role="main" class="container" style="margin-top:20px">
 
         <div id="status"></div>        
-        <button type="button" class="btn btn-primary" onclick="data()">Show All Data</button><br>
+        <button type="button" class="btn btn-primary" onclick="data()">Show All Data</button><br><br>
+
+        <!-- add user interface elements to add new posts -->
+        <!-- -------------------------------------------- -->
+        <!-- YOUR CODE -->
 
     </main>
 
@@ -21,13 +25,24 @@ function data() {
 
     superagent
         .get(url)
-        .end(
-            // ----------------------------------
-            //      YOUR CODE
-            // ----------------------------------
-        );
+        .end(function(err, res){
+            if(err){
+                console.log(err);
+            }
+            else{
+                console.log(res);
+                status.innerHTML = JSON.stringify(res.body);
+            }
+
+        });
 }
 
+function add() {
 
+    // call server and add new post
+    // ---------------------------------------
+    // YOUR CODE
+
+}
 </script>
 </html>

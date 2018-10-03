@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "lowdb is awesome",
+      "published": "false"
+    },
+    {
+      "id": 2,
+      "title": "good",
+      "published": "false"
+    },
+    {
+      "id": 3,
+      "title": "cool",
+      "published": "true"
+    },
+    {
+      "id": 4,
+      "title": "great",
+      "published": "true"
+    },
+    {
+      "title": "hello",
+      "id": "5",
+      "published": "false"
+    },
+    {
+      "title": "apple space",
+      "id": "6",
+      "published": "true"
+    }
+  ]
+}
