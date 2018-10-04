@@ -9,6 +9,10 @@ var db      = low(adapter);
 // ------------------------------------------------------------------
 app.use(express.static('public'));
 
+// allow Cross-Origin Resource Sharing (CORS)
+var cors = require('cors');
+app.use(cors());
+
 // init the data store
 db.defaults({ posts: []}).write();
 
