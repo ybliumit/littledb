@@ -1,2 +1,2 @@
 # littledb
-Little DB Exercise
+Little DB Exercises
