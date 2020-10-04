@@ -1,5 +1,5 @@
 // add http server
-// -----------------------
+// ----------------------
 // YOUR CODE
 
 var low     = require('lowdb');
