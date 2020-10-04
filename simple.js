@@ -4,7 +4,7 @@ var adapter = new fs('db.json');
 var db      = low(adapter);
 
 // init the data store
-// ----------------------------
+// ---------------------------
 // YOUR CODE
 
 // add post
