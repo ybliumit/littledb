@@ -13,6 +13,8 @@ var db      = low(adapter);
 // ------------------------------------------------------------------
 // YOUR CODE
 
+app.use(express.static('public'));
+
 // init the data store
 db.defaults({ posts: []}).write();
 
@@ -28,11 +30,24 @@ app.get('/data', function(req, res){
 // add post - test using:
 //      curl http://localhost:3000/posts/ping/1/false
 // ----------------------------------------------------
+
+// have the ":" made them in to parameter, instead of static values
+//********************************** */
+
 app.get('/posts/:title/:id/:published', function(req, res){
 
     // YOUR CODE
+    var post = {
+        "title" : req.params.title,
+        "id"    : req.params.id,
+        "published" : req.params.published
+    };
+    db.get('posts').push(post).write();
+    console.log(db.get('posts').value());  
+    res.send(db.get('posts').value());
 
 });
+
 
 // ----------------------------------------------------
 // filter by published state - test using:
@@ -68,5 +83,5 @@ app.get('/delete/:id/', function(req, res){
 // -----------------------
 // YOUR CODE
 app.listen(3000, function(){
-    console.log('running at port 300')
+    console.log('running at port 3000')
 })

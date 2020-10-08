@@ -21,10 +21,20 @@ function data() {
 
     superagent
         .get(url)
-        .end(
+        .end(function(err, res){
+           if(err){
+               console.log(err);
+           }
+           else{
+               console.log(res);
+               status.innerHTML = JSON.stringify(res.body);
+           }
+       }
+
             // ---------------------------------
             //      YOUR CODE
             // ---------------------------------
+
         );
 }
 

@@ -1,3 +1,36 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "id": 1,
+      "title": "lowdb is awesome"
+    },
+    {
+      "title": ":title",
+      "id": ":id",
+      "published": ":published"
+    },
+    {
+      "title": "haha",
+      "id": "3",
+      "published": "true"
+    },
+    {
+      "title": "haha",
+      "id": "4",
+      "published": "true"
+    },
+    {
+      "title": "haha",
+      "id": "4",
+      "published": "false"
+    },
+    {
+      "title": "haha",
+      "id": "5",
+      "published": "false"
+    }
+  ],
+  "user": {
+    "name": "typicode"
+  }
 }
