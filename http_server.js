@@ -1,6 +1,8 @@
 // add http server
 // -----------------------
 // YOUR CODE
+var express = require('express');
+var app = express();
 
 var low     = require('lowdb');
 var fs      = require('lowdb/adapters/FileSync');
@@ -18,6 +20,7 @@ db.defaults({ posts: []}).write();
 app.get('/data', function(req, res){     
 
     // YOUR CODE
+    req.setEncoding(db.get('posts').value());
 
 });
 
@@ -64,3 +67,6 @@ app.get('/delete/:id/', function(req, res){
 // start server
 // -----------------------
 // YOUR CODE
+app.listen(3000, function(){
+    console.log('running at port 300')
+})
